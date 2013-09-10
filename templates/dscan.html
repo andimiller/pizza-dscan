@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}D-Scan - PIZZA Toolbox{% endblock %}
+{% block header %}D-Scan Parser{% endblock %}
+{% block body %}
+<div class="row">
+	<div class="col-md-4">
+		<p>This tool is very much still in alpha, feedback is appreciated, it may take 3-4 seconds to parse your data because sqlite is slow, please be patient.</p>
+		<form action="/" method="POST">
+			<textarea name="dscandata" style="width: 100%; height: 300px;"></textarea>
+			<input name="Parse" type="submit" class="btn btn-large btn-success" value="Parse">
+		</form>
+	</div>
+</div>
+
+{% endblock %}

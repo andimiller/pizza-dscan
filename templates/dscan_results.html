@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}D-Scan - PIZZA Toolbox{% endblock %}
+{% block header %}Results{% if system %} - {{ system }}{% endif %}{% endblock %}
+{% block body %}
+<style>
+	.indent {
+		padding-left: 35px;
+		background-color: #f9f9f9;
+	}
+	.black-link {
+		color: black !important;
+	}
+	.remove-lower-margin {
+		margin-bottom: 0px !important;
+	}
+	.badge {
+		background-color: #222222 !important;
+	}
+
+</style>
+
+
+
+<ul class="nav nav-tabs">
+	<li><a onClick="$('.remove-lower-margin').collapse('show') | $('.remove-lower-margin').collapse('hide')" class="button button-primary">Toggle All</a></li>
+	<li class="active"><a href="#unmerged" data-toggle="tab">Unmerged</a></li>
+	<li><a href="#merged" data-toggle="tab">Merged</a></li>
+</ul>
+<div class="tab-content row">
+	<div class="tab-pane fade active in active" id="unmerged">
+		{% for category in categorylist %}
+			<div class="col-md-4">
+				<div class="panel panel-primary">
+					<div class="panel-heading"><span class="panel-title">{{ category }}<span class="badge pull-right">{{ sums[category] }}</span></span></div>
+					<div class="panel-body">
+						<ul class="list-group">
+							{% for item, value, colour in categories[category] %}
+							<a class="list-group-item black-link" data-toggle="collapse" data-target="#{{ item|replace(" ","") }}"><span class="text{{ color }}"><i class="icon-list"></i> {{ item }}</span><span class="badge pull-right">{{ value }}</span></a>
+								<ul class="list-group remove-lower-margin collapse" id="{{ item|replace(" ","") }}">
+									{% for i, v, c in groups[item] %}
+									<li class="list-group-item indent">{{ i }}<span class="badge pull-right" ><span class="text{{ c }}">{{ v }}</span></span></li>
+									{% endfor %}
+								</ul>
+							{% endfor %}
+						<ul>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+	<div class="tab-pane fade in" id="merged">
+		{% for category in categorylist %}
+			<div class="col-md-4">
+				<div class="panel panel-primary">
+					<div class="panel-heading"><span class="panel-title">{{ category }}<span class="badge pull-right">{{ sums[category] }}</span></span></div>
+					<div class="panel-body">
+						<ul class="list-group">
+							{% for item, value, colour in categorywide[category] %}
+								<li class="list-group-item">{{ item }}<span class="badge pull-right" ><span class="text{{ colour }}">{{ value }}</span></span></li>
+							{% endfor %}
+						<ul>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+
+
+
+</div>
+{% endblock %}

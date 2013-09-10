@@ -1,0 +1,114 @@
+¢ Beer WaxYrox	Thanatos	349 m
+UW9B-F - Star	Sun K5 (Red Giant)	9.6 AU
+Stasis Webification Battery	Stasis Webification Battery	-
+Small Pulse Laser Battery	Small Pulse Laser Battery	-
+Small Pulse Laser Battery	Small Pulse Laser Battery	-
+Small Pulse Laser Battery	Small Pulse Laser Battery	-
+Small Pulse Laser Battery	Small Pulse Laser Battery	-
+Ship Maintenance Array	Ship Maintenance Array	-
+Strain Render Alvi Wreck	Rogue Small Wreck	-
+Strain Decimator Alvi Wreck	Rogue Small Wreck	-
+UW9B-F V	Planet (Temperate)	9.6 AU
+UW9B-F I	Planet (Plasma)	9.8 AU
+UW9B-F III	Planet (Plasma)	9.6 AU
+UW9B-F IV	Planet (Lava)	9.9 AU
+UW9B-F X	Planet (Gas)	43,444 km
+UW9B-F IX	Planet (Gas)	11.5 AU
+UW9B-F II	Planet (Barren)	9.6 AU
+UW9B-F VI	Planet (Barren)	9.1 AU
+UW9B-F VII	Planet (Barren)	8.8 AU
+UW9B-F VIII	Planet (Barren)	7.6 AU
+UW9B-F X - Moon 2	Moon	90,080 km
+UW9B-F IV - Moon 1	Moon	9.9 AU
+UW9B-F V - Moon 1	Moon	9.6 AU
+UW9B-F X - Moon 21	Moon	9,898,624 km
+UW9B-F X - Moon 12	Moon	864,673 km
+UW9B-F VII - Moon 3	Moon	8.8 AU
+UW9B-F VII - Moon 2	Moon	8.8 AU
+UW9B-F VII - Moon 1	Moon	8.8 AU
+UW9B-F X - Moon 20	Moon	8,211,546 km
+UW9B-F X - Moon 11	Moon	734,881 km
+UW9B-F X - Moon 10	Moon	694,864 km
+UW9B-F X - Moon 19	Moon	5,525,393 km
+UW9B-F X - Moon 9	Moon	382,501 km
+UW9B-F X - Moon 8	Moon	379,129 km
+UW9B-F X - Moon 5	Moon	323,532 km
+UW9B-F X - Moon 4	Moon	306,681 km
+UW9B-F X - Moon 18	Moon	3,751,907 km
+UW9B-F X - Moon 7	Moon	257,186 km
+UW9B-F X - Moon 6	Moon	244,065 km
+UW9B-F X - Moon 17	Moon	2,947,241 km
+UW9B-F X - Moon 3	Moon	177,730 km
+UW9B-F X - Moon 1	Moon	130,627 km
+UW9B-F IX - Moon 9	Moon	11.5 AU
+UW9B-F IX - Moon 8	Moon	11.5 AU
+UW9B-F IX - Moon 7	Moon	11.5 AU
+UW9B-F IX - Moon 6	Moon	11.5 AU
+UW9B-F IX - Moon 5	Moon	11.5 AU
+UW9B-F IX - Moon 4	Moon	11.5 AU
+UW9B-F IX - Moon 3	Moon	11.5 AU
+UW9B-F IX - Moon 2	Moon	11.5 AU
+UW9B-F IX - Moon 1	Moon	11.5 AU
+UW9B-F IX - Moon 16	Moon	11.5 AU
+UW9B-F IX - Moon 15	Moon	11.5 AU
+UW9B-F IX - Moon 14	Moon	11.5 AU
+UW9B-F IX - Moon 13	Moon	11.5 AU
+UW9B-F IX - Moon 12	Moon	11.5 AU
+UW9B-F IX - Moon 11	Moon	11.5 AU
+UW9B-F IX - Moon 10	Moon	11.5 AU
+UW9B-F X - Moon 16	Moon	1,994,156 km
+UW9B-F X - Moon 15	Moon	1,779,084 km
+UW9B-F X - Moon 14	Moon	1,350,839 km
+UW9B-F X - Moon 13	Moon	1,260,661 km
+UW9B-F X - Moon 23	Moon	0.1 AU
+UW9B-F X - Moon 22	Moon	0.1 AU
+Minmatar Control Tower	Minmatar Control Tower	-
+Hobgoblin II	Hobgoblin II	-
+Hobgoblin II	Hobgoblin II	-
+Hobgoblin II	Hobgoblin II	-
+Hobgoblin II	Hobgoblin II	-
+Hobgoblin II	Hobgoblin II	-
+...	Heron	8,675 m
+Force Field	Force Field	-
+Force Field	Force Field	-
+Force Field	Force Field	-
+Customs Office (UW9B-F IV)	Customs Office	9.9 AU
+Customs Office (UW9B-F I)	Customs Office	9.8 AU
+Customs Office (UW9B-F V)	Customs Office	9.6 AU
+Customs Office (UW9B-F III)	Customs Office	9.6 AU
+Customs Office (UW9B-F II)	Customs Office	9.6 AU
+Customs Office (UW9B-F VI)	Customs Office	9.1 AU
+Customs Office (UW9B-F VIII)	Customs Office	7.6 AU
+Customs Office (UW9B-F X)	Customs Office	103,557 km
+wheniaminspace's Frozen Corpse	Corpse	56 km
+basjah's Frozen Corpse	Corpse	5,448 m
+Freddie Gibbs's Frozen Corpse	Corpse	33 km
+Stephan Schneider's Frozen Corpse	Corpse	3,149 m
+Zilero's Frozen Corpse	Corpse	27 km
+Joonas Reijo's Frozen Corpse	Corpse	24 km
+Jake Hendar's Frozen Corpse	Corpse	23 km
+wheniamgay's Frozen Corpse	Corpse	22 km
+Peaceful Surrender's Frozen Corpse	Corpse	2,164 m
+Scott Helvenston's Frozen Corpse	Corpse	14 km
+Didier L'embrouille's Frozen Corpse	Corpse	-
+IcyAngel559's Frozen Corpse	Corpse Female	4,763 m
+Laura Gray's Frozen Corpse	Corpse Female	30 km
+Fragbox's Frozen Corpse	Corpse Female	3,507 m
+Dona SciFi's Frozen Corpse	Corpse Female	29 km
+Junko Sideswipe's Frozen Corpse	Corpse Female	22 km
+UW9B-F X - Guardian Angels Logistic Support	Caldari Research Station	0 m
+easy blops easy game easy life	Caldari Control Tower Small	-
+Bouncer I	Bouncer I	-
+Bouncer I	Bouncer I	-
+Bouncer I	Bouncer I	-
+Bouncer I	Bouncer I	-
+UW9B-F I - Asteroid Belt 1	Asteroid Belt	9.8 AU
+UW9B-F V - Asteroid Belt 1	Asteroid Belt	9.6 AU
+UW9B-F III - Asteroid Belt 1	Asteroid Belt	9.6 AU
+UW9B-F VIII - Asteroid Belt 2	Asteroid Belt	7.6 AU
+UW9B-F VIII - Asteroid Belt 1	Asteroid Belt	7.6 AU
+UW9B-F X - Asteroid Belt 1	Asteroid Belt	55,302 km
+UW9B-F IX - Asteroid Belt 1	Asteroid Belt	11.5 AU
+Carebear Stare	Amarr Control Tower Small	-
+Lampaiden laidunmaa	Amarr Control Tower Medium	-
+Amarr Battleship Wreck	Amarr Battleship Wreck	-
