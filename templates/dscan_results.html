@@ -19,7 +19,16 @@
 
 </style>
 
-
+{% set counter = 0 %}
+{% set category = "Ship" %}
+<div class="progress">
+	{% for item, value, color in categories[category] %}
+	<a id="{{ item|replace(" ","") }}-pb" data-toggle="tooltip" data-container="body" class="progress-bar" title="{{ item }} - {{ value }}" style="width: {{ (value/sums[category]*100) }}%; background-color: {{ color_variant("#d94f79", brightness_offset=counter) }}; ">
+		<span class="sr-only">{{ item }} - {{ value }}</span>
+	</a>
+	{% set counter = counter + 10 %}
+	{% endfor %}
+</div>
 
 <ul class="nav nav-tabs">
 	<li><a onClick="$('.remove-lower-margin').collapse('show') | $('.remove-lower-margin').collapse('hide')" class="button button-primary">Toggle All</a></li>
@@ -66,6 +75,21 @@
 	</div>
 
 
-
 </div>
+
+<script>
+// $(".hoverDiv").tooltip();
+{% for category in categorylist %}
+	{% for item, value, colour in categories[category] %}
+		$('#{{ item|replace(" ","") }}').on('show.bs.collapse', function() {
+			$("#{{ item|replace(" ","") }}-pb")[0].style.visibility="visible";
+		})
+		$('#{{ item|replace(" ","") }}').on('hide.bs.collapse', function() {
+			$("#{{ item|replace(" ","") }}-pb")[0].style.visibility="hidden";
+		})
+	{% endfor %}
+{% endfor %}
+</script>
+
+
 {% endblock %}
