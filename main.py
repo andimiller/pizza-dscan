@@ -67,7 +67,7 @@ def dscanview(id):
 	data["sizeorder"] = sorted(data["sizeorder"], key=lambda x: -sum(data["sizemap"][x].values()))
 	data["color_variant"] = color_variant
 	data["string2color"] = hashstringtocolor
-	return render_template("dscan_results_new.html", **data)
+	return render_template("dscan_results.html", **data)
 
 
 @app.teardown_appcontext
