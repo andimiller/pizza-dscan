@@ -23,5 +23,12 @@
 	filter: alpha(opacity=100);
 }
 .progress {
-	margin-bottom: 6px !important;
+	margin-bottom: 2px !important;
+}
+.progress-header {
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-transform:capitalize;
+
 }

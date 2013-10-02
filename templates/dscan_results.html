@@ -1,16 +1,27 @@
 {% extends "base.html" %}
 {% block title %}D-Scan - PIZZA Toolbox{% endblock %}
-{% block header %}Results{% if system and system|length==2 %} - <a href="http://evemaps.dotlan.net/map/{{ system[1]|replace(" ", "_") }}/{{ system[0]}}">{{ system[0] }} / {{ system[1] }}</a>{% endif %}{% endblock %}
+{% block header %}
+
+Results{% if system and system|length==2 %} - <a href="http://evemaps.dotlan.net/map/{{ system[1]|replace(" ", "_") }}/{{ system[0]}}">{{ system[0] }} / {{ system[1] }}</a>{% endif %}
+
+<div style="float:right;">
+	<a data-toggle="tooltip" data-trigger="hover focus"  href="#" id="btn-toggle-labels" type="button" class="btn btn-info">
+		<i class="icon-tags"></i>Toggle Labels
+	</a>
+</div>
+
+{% endblock %}
 {% block body %}
 <link rel="stylesheet" type="text/css" href="/static/css/dscan.css" />
 
 {% if sizemap and sizestotal %}
 <div class="row">
+	<h5 class="progress-header">Ship Hull Size</h5>
 	<div class="progress">
 		{% for size in sizeorder %}
 		<div id="{{ size }}-pb" data-toggle="tooltip" data-trigger="hover focus click" data-container="body" class="progress-bar" title="{{ size }} - {{ sizemap[size].values()|sum }}" style="width: {{ (sizemap[size].values()|sum/sizestotal*100) }}%; background-color: {{ string2color(size) }}; ">
-			{% if (sizemap[size]|length/sizestotal*100) > 7.5 %}
-			<span class="pgtext">{{ size }}</span>
+			{% if (sizemap[size].values()|sum/sizestotal*100) > 7.5 %}
+			<span class="pgtext">{{ size }} [{{ sizemap[size].values()|sum }}]</span>
 			{% endif %}
 		</div>
 		{% endfor %}
@@ -21,11 +32,12 @@
 {% for category in categorylist %}
 {% if category in ["Ship"] and sums[category]>1 %}
 <div class="row">
+	<h5 class="progress-header">{{ category }} (Specific)</h5>
 	<div class="progress">
 		{% for item, value, color in categorywide[category] %}
 		<div id="{{ item|replace(" ","") }}-pb" data-trigger="hover focus click" data-toggle="tooltip" class="progress-bar" title="{{ item }} - {{ value }}" style="width: {{ (value/sums[category]*100) }}%; background-color: {{ string2color(item) }}; ">
 				{% if (value/sums[category]*100) > 7.5 %}
-			<span class="pgtext">{{ item }}</span>
+				<span class="pgtext">{{ item }} [{{ value }}]</span>
 			{% endif %}
 		</div>
 		{% endfor %}
@@ -37,11 +49,12 @@
 {% for category in categorylist %}
 {% if categories[category]|length > 1 %}
 <div class="row">
+	<h5 class="progress-header">{{ category }} (Grouped)</h5>
 	<div class="progress">
 		{% for item, value, color in categories[category] %}
 		<div id="{{ item|replace(" ","") }}-pb" data-trigger="hover focus click" data-toggle="tooltip" class="progress-bar" title="{{ item }} - {{ value }}" style="width: {{ (value/sums[category]*100) }}%; background-color: {{ string2color(item) }}; ">
 			{% if (value/sums[category]*100) > 7.5 %}
-			<span class="pgtext">{{ item }}</span>
+			<span class="pgtext">{{ item }} [{{ value }}]</span>
 			{% endif %}
 		</div>
 		{% endfor %}
@@ -98,7 +111,23 @@
 </div>
 
 <script>
+// Tooltips
 $(".progress-bar").tooltip();
+$("#btn-toggle-labels").tooltip();
+// Activate collapse for labels, then hide them
+$(".progress-header").collapse();
+$(".progress-header").collapse('hide');
+// Callbacks to toggle labels
+function showLabels() {
+	$(".progress-header").collapse('show');
+	$("#btn-toggle-labels").click(hideLabels);
+}
+function hideLabels() {
+	$(".progress-header").collapse('hide');
+	$("#btn-toggle-labels").click(showLabels);
+}
+
+$("#btn-toggle-labels").click(showLabels);
 </script>
 
 
