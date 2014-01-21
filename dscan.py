@@ -11,10 +11,13 @@ class DScan():
 		self.redisdb = redis_wrap.get_hash('dscan_categories')
 		self.redis_sizes = redis_wrap.get_hash('dscan_sizes')
 		self.redis_systems = redis_wrap.get_hash('dscan_systems')
-		self.db = sqlite3.connect('ody11-sqlite3-v1.db')
+		self.db = sqlite3.connect('sqlite-latest.sqlite')
 		c = self.db.cursor()
 		for row in c.execute("select distinct invTypes.typeName, invGroups.groupName, invCategories.categoryName from invTypes, invGroups, invCategories WHERE invGroups.groupID=invTypes.groupID AND invCategories.categoryID=invGroups.categoryID"):
-			self.redisdb[row[0]] = json.dumps((row[1] or None, row[2] or None))
+			try:
+				self.redisdb[row[0]] = json.dumps((row[1] or None, row[2] or None))
+			except:
+				print "could not load row for %s" % row[0]
 		for row in c.execute("select invTypes.typeName, dgmTypeAttributes.valueFloat from invTypes, dgmTypeAttributes where dgmTypeAttributes.typeID=invTypes.typeID and dgmTypeAttributes.attributeID=1547"):
 			self.redis_sizes[row[0]] = int(row[1])
 		for row in c.execute("select mapRegions.regionName, mapSolarSystems.solarSystemName from mapRegions, mapSolarSystems where mapRegions.regionID=mapSolarSystems.regionID"):
