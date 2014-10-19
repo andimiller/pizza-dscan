@@ -30,7 +30,10 @@ class DScan():
 		result["name"] = line[0]
 		result["type"] = line[1]
 		result["distance"] = line[2]
-		group = json.loads(self.redisdb[result["type"]])
+		if result["type"] in self.redisdb:
+			group = json.loads(self.redisdb[result["type"]])
+		else:
+			group = ("Unknown", "Unknown")
 		result["group"] = str(group) and group[0] or None
 		result["category"] = str(group) and group[1] or None
 		return result
